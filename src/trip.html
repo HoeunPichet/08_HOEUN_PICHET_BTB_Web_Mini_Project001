@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../output/app.css">
+    <title>Document</title>
+</head>
+<body class="bg-light">
+    <!-- Page Header -->
+    <header class="px-5 h-20 w-full flex gap-5 items-center justify-between sticky top-0 bg-light z-50">
+        <div class="flex gap-2 items-center basis-40 lg:basis-60 xl:basis-72">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-7 text-primary">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-1.5 0a6.5 6.5 0 1 1-11-4.69v.447a3.5 3.5 0 0 0 1.025 2.475L8.293 10 8 10.293a1 1 0 0 0 0 1.414l1.06 1.06a1.5 1.5 0 0 1 .44 1.061v.363a1 1 0 0 0 .553.894l.276.139a1 1 0 0 0 1.342-.448l1.454-2.908a1.5 1.5 0 0 0-.281-1.731l-.772-.772a1 1 0 0 0-1.023-.242l-.384.128a.5.5 0 0 1-.606-.25l-.296-.592a.481.481 0 0 1 .646-.646l.262.131a1 1 0 0 0 .447.106h.188a1 1 0 0 0 .949-1.316l-.068-.204a.5.5 0 0 1 .149-.538l1.44-1.234A6.492 6.492 0 0 1 16.5 10Z" clip-rule="evenodd" />
+            </svg>
+            <h1 class="font-bold text-3xl">Travel</h1>
+        </div>
+        <nav class="hidden md:flex justify-center">
+            <ul class="flex gap-1 lg:gap-5 [&>*>*]:px-3 font-poppins [&>*>*]:hover:text-primary [&>*>*]:hover:font-bold">
+                <li>
+                    <a href="./index.html" class="font-medium text-md">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="font-bold text-md text-primary">Our offer</a>
+                </li>
+                <li>
+                    <a href="./booking.html" class="font-medium text-md">Booking</a>
+                </li>
+                <li>
+                    <a href="./faq.html" class="font-medium text-md">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="hidden md:block relative basis-48 lg:basis-60 xl:basis-72">
+            <input type="text" name="" class="border text-xs w-full border-slate-400 focus:border-primary rounded-full outline-none px-4 py-2.5 placeholder:text-slate-800" placeholder="Search">
+            <div class="absolute top-1/2 -translate-y-[50%] right-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5 text-primary">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Mobile Screen Sidebar -->
+        <aside class="block md:hidden">
+            <input type="checkbox" id="open-menu" class="sr-only peer">
+            <label for="open-menu" class="relative peer-checked:[&>.backdrop]:block peer-checked:[&>nav]:w-[80vh]">
+                <div class="rounded-md flex place-items-center group cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-7 text-primary" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </div>
+                <div class="backdrop fixed top-0 left-0 z-30 hidden bg-black/30 w-full h-screen"></div>
+                <nav class="fixed z-50 top-0 right-0 h-screen w-0 transition-all duration-500 overflow-hidden bg-content max-w-64 shadow">
+                    <div class="px-3">
+                        <div class="flex w-full justify-start border-b border-slate-300 h-16 gap-2 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-7 text-primary">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-1.5 0a6.5 6.5 0 1 1-11-4.69v.447a3.5 3.5 0 0 0 1.025 2.475L8.293 10 8 10.293a1 1 0 0 0 0 1.414l1.06 1.06a1.5 1.5 0 0 1 .44 1.061v.363a1 1 0 0 0 .553.894l.276.139a1 1 0 0 0 1.342-.448l1.454-2.908a1.5 1.5 0 0 0-.281-1.731l-.772-.772a1 1 0 0 0-1.023-.242l-.384.128a.5.5 0 0 1-.606-.25l-.296-.592a.481.481 0 0 1 .646-.646l.262.131a1 1 0 0 0 .447.106h.188a1 1 0 0 0 .949-1.316l-.068-.204a.5.5 0 0 1 .149-.538l1.44-1.234A6.492 6.492 0 0 1 16.5 10Z" clip-rule="evenodd" />
+                            </svg>
+                            <h1 class="font-bold text-3xl text-white">Travel</h1>
+                        </div>
+                    </div>
+                    <h1 class="p-3 pb-0 font-poppins font-medium text-lg mt-3 text-white">Menu</h1>
+                    <ul class="flex flex-col p-3 [&>*>*]:font-poppins [&>*>*]:text-white gap-3">
+                        <li class="flex gap-3 items-end cursor-pointer hover:bg-primary px-3 py-2 rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                            </svg>                              
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="flex gap-3 items-end cursor-pointer bg-primary px-3 py-2 rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+                            </svg>                                                          
+                            <a href="#">Our offer</a>
+                        </li>
+                        <li class="flex gap-3 items-end cursor-pointer hover:bg-primary px-3 py-2 rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0 1 20.25 6v12A2.25 2.25 0 0 1 18 20.25H6A2.25 2.25 0 0 1 3.75 18V6A2.25 2.25 0 0 1 6 3.75h1.5m9 0h-9" />
+                            </svg>                                                          
+                            <a href="#">Booking</a>
+                        </li>
+                        <li class="flex gap-3 items-end cursor-pointer hover:bg-primary px-3 py-2 rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+                            </svg>
+                            <a href="#">FAQ</a>
+                        </li>
+                    </ul>
+                </nav>
+            </label>
+        </aside>
+    </header>
+
+    <!-- Main Content -->
+    <main class="px-5 w-full max-w-7xl mx-auto mt-5 mb-10">
+        <!-- Hero Section -->
+        <section class="relative h-96 lg:h-[28rem] overflow-hidden rounded-3xl">
+            <img class="object-cover w-full h-full object-center" src="./images/banner3.jpg" alt="Banner3">
+            <div class="absolute left-0 top-0 bg-content/85 rounded-3xl h-full w-full md:w-1/2 lg:w-2/5 px-10 flex flex-col gap-5 justify-center">
+                <h1 class="font-poppins font-black text-5xl text-white leading-14">
+                    <span>Last</span><br>
+                    <span class="text-primary">minute</span><br>
+                    <span>trips</span>
+                </h1>
+                <p class="font-poppins text-white font-medium">Discover possiblities of traveling!</p>
+            </div>
+        </section>
+        <!-- Choice Section -->
+        <section class="flex flex-wrap gap-5 mt-5">
+            <select name="month" id="month" class="bg-lightgray text-sm py-5 px-8 rounded-full outline-none">
+                <!-- Select -->
+                <option value="">Dates</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+            <!-- Guest -->
+            <select name="guest" id="guest" class="bg-lightgray text-sm py-5 px-10 rounded-full outline-none">
+                <option value="Guest">Guest</option>
+            </select>
+            <!-- Location -->
+            <select name="location" id="location" class="bg-lightgray text-sm py-5 px-8 rounded-full outline-none">
+                <option value="Location">Location</option>
+            </select>
+            <!-- Transfer Type -->
+            <select name="transfer" id="transfer" class="bg-lightgray text-sm py-5 px-8 rounded-full outline-none">
+                <option value="Transfer Type">Transfer Type</option>
+            </select>
+            <!-- Price -->
+            <select name="price" id="price" class="bg-lightgray text-sm py-5 px-8 rounded-full outline-none">
+                <option value="Price">Price</option>
+            </select>
+        </section>
+        <!-- Table Section -->
+        <section class="w-full overflow-x-auto mt-7 rounded-2xl border border-gray-400">
+            <table class="w-full">
+                <thead class="font-poppins font-bold">
+                    <tr class="[&>*]:bg-lightgray [&>*]:px-3 [&>*]:py-5 [&>*:first-child]:pl-10">
+                        <th class="min-w-[18rem] text-left rounded-bl-2xl">Hotel</th>
+                        <th class="min-w-[10rem] text-center">Rating</th>
+                        <th class="min-w-[10rem] text-left">Date</th>
+                        <th class="min-w-[10rem] text-center">Transfer type</th>
+                        <th class="min-w-[10rem] text-left rounded-br-2xl">Price</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-400 font-poppins [&>*>*]:px-3 [&>*>*]:py-6 [&>*>*:first-child]:pl-10">
+                    <tr>
+                        <td class="font-medium shrink-0">Casa del Sol Resort & Spa</td>
+                        <td class="text-sm text-center">5</td>
+                        <td class="text-sm">6 nights</td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 mx-auto" viewBox="0 0 576 512">
+                                <path d="M482.3 192c34.2 0 93.7 29 93.7 64c0 36-59.5 64-93.7 64l-116.6 0L265.2 495.9c-5.7 10-16.3 16.1-27.8 16.1l-56.2 0c-10.6 0-18.3-10.2-15.4-20.4l49-171.6L112 320 68.8 377.6c-3 4-7.8 6.4-12.8 6.4l-42 0c-7.8 0-14-6.3-14-14c0-1.3 .2-2.6 .5-3.9L32 256 .5 145.9c-.4-1.3-.5-2.6-.5-3.9c0-7.8 6.3-14 14-14l42 0c5 0 9.8 2.4 12.8 6.4L112 192l102.9 0-49-171.6C162.9 10.2 170.6 0 181.2 0l56.2 0c11.5 0 22.1 6.2 27.8 16.1L365.7 192l116.6 0z"/>
+                            </svg>
+                        </td>
+                        <td class="text-sm">from €700</td>
+                    </tr>
+                    <tr>
+                        <td class="font-medium">Marbella Bayview Hotel</td>
+                        <td class="text-sm text-center">5</td>
+                        <td class="text-sm">6 nights</td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 mx-auto" viewBox="0 0 576 512">
+                                <path d="M288 0C422.4 0 512 35.2 512 80l0 16 0 32c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l0 160c0 17.7-14.3 32-32 32l0 32c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-32-192 0 0 32c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-32c-17.7 0-32-14.3-32-32l0-160c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32c0 0 0 0 0 0l0-32s0 0 0 0l0-16C64 35.2 153.6 0 288 0zM128 160l0 96c0 17.7 14.3 32 32 32l112 0 0-160-112 0c-17.7 0-32 14.3-32 32zM304 288l112 0c17.7 0 32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-112 0 0 160zM144 400a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm288 0a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM384 80c0-8.8-7.2-16-16-16L208 64c-8.8 0-16 7.2-16 16s7.2 16 16 16l160 0c8.8 0 16-7.2 16-16z"/>
+                            </svg>
+                        </td>
+                        <td class="text-sm">from €550</td>
+                    </tr>
+                    <tr>
+                        <td class="font-medium">Alhambra Oasis Retreat</td>
+                        <td class="text-sm text-center">4</td>
+                        <td class="text-sm">10 nights</td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 mx-auto" viewBox="0 0 576 512">
+                                <path d="M482.3 192c34.2 0 93.7 29 93.7 64c0 36-59.5 64-93.7 64l-116.6 0L265.2 495.9c-5.7 10-16.3 16.1-27.8 16.1l-56.2 0c-10.6 0-18.3-10.2-15.4-20.4l49-171.6L112 320 68.8 377.6c-3 4-7.8 6.4-12.8 6.4l-42 0c-7.8 0-14-6.3-14-14c0-1.3 .2-2.6 .5-3.9L32 256 .5 145.9c-.4-1.3-.5-2.6-.5-3.9c0-7.8 6.3-14 14-14l42 0c5 0 9.8 2.4 12.8 6.4L112 192l102.9 0-49-171.6C162.9 10.2 170.6 0 181.2 0l56.2 0c11.5 0 22.1 6.2 27.8 16.1L365.7 192l116.6 0z"/>
+                            </svg>
+                        </td>
+                        <td class="text-sm">from €1000</td>
+                    </tr>
+                    <tr>
+                        <td class="font-medium">Costa del Sol Suites</td>
+                        <td class="text-sm text-center">4</td>
+                        <td class="text-sm">8 nights</td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 mx-auto" viewBox="0 0 576 512">
+                                <path d="M482.3 192c34.2 0 93.7 29 93.7 64c0 36-59.5 64-93.7 64l-116.6 0L265.2 495.9c-5.7 10-16.3 16.1-27.8 16.1l-56.2 0c-10.6 0-18.3-10.2-15.4-20.4l49-171.6L112 320 68.8 377.6c-3 4-7.8 6.4-12.8 6.4l-42 0c-7.8 0-14-6.3-14-14c0-1.3 .2-2.6 .5-3.9L32 256 .5 145.9c-.4-1.3-.5-2.6-.5-3.9c0-7.8 6.3-14 14-14l42 0c5 0 9.8 2.4 12.8 6.4L112 192l102.9 0-49-171.6C162.9 10.2 170.6 0 181.2 0l56.2 0c11.5 0 22.1 6.2 27.8 16.1L365.7 192l116.6 0z"/>
+                            </svg>
+                        </td>
+                        <td class="text-sm">from €930</td>
+                    </tr>
+                    <tr>
+                        <td class="font-medium">Ibiza Azure Beach Resort</td>
+                        <td class="text-sm text-center">5</td>
+                        <td class="text-sm">8 nights</td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 mx-auto" viewBox="0 0 576 512">
+                                <path d="M482.3 192c34.2 0 93.7 29 93.7 64c0 36-59.5 64-93.7 64l-116.6 0L265.2 495.9c-5.7 10-16.3 16.1-27.8 16.1l-56.2 0c-10.6 0-18.3-10.2-15.4-20.4l49-171.6L112 320 68.8 377.6c-3 4-7.8 6.4-12.8 6.4l-42 0c-7.8 0-14-6.3-14-14c0-1.3 .2-2.6 .5-3.9L32 256 .5 145.9c-.4-1.3-.5-2.6-.5-3.9c0-7.8 6.3-14 14-14l42 0c5 0 9.8 2.4 12.8 6.4L112 192l102.9 0-49-171.6C162.9 10.2 170.6 0 181.2 0l56.2 0c11.5 0 22.1 6.2 27.8 16.1L365.7 192l116.6 0z"/>
+                            </svg>
+                        </td>
+                        <td class="text-sm">from €1200</td>
+                    </tr>
+                    <tr>
+                        <td class="font-medium">Seville Palacio del Rio</td>
+                        <td class="text-sm text-center">4</td>
+                        <td class="text-sm">6 nights</td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 mx-auto" viewBox="0 0 576 512">
+                                <path d="M482.3 192c34.2 0 93.7 29 93.7 64c0 36-59.5 64-93.7 64l-116.6 0L265.2 495.9c-5.7 10-16.3 16.1-27.8 16.1l-56.2 0c-10.6 0-18.3-10.2-15.4-20.4l49-171.6L112 320 68.8 377.6c-3 4-7.8 6.4-12.8 6.4l-42 0c-7.8 0-14-6.3-14-14c0-1.3 .2-2.6 .5-3.9L32 256 .5 145.9c-.4-1.3-.5-2.6-.5-3.9c0-7.8 6.3-14 14-14l42 0c5 0 9.8 2.4 12.8 6.4L112 192l102.9 0-49-171.6C162.9 10.2 170.6 0 181.2 0l56.2 0c11.5 0 22.1 6.2 27.8 16.1L365.7 192l116.6 0z"/>
+                            </svg>
+                        </td>
+                        <td class="text-sm">from €550</td>
+                    </tr>
+                    <tr>
+                        <td class="font-medium">Valencia Grande Hotel</td>
+                        <td class="text-sm text-center">3</td>
+                        <td class="text-sm">8 nights</td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 mx-auto" viewBox="0 0 576 512">
+                                <path d="M482.3 192c34.2 0 93.7 29 93.7 64c0 36-59.5 64-93.7 64l-116.6 0L265.2 495.9c-5.7 10-16.3 16.1-27.8 16.1l-56.2 0c-10.6 0-18.3-10.2-15.4-20.4l49-171.6L112 320 68.8 377.6c-3 4-7.8 6.4-12.8 6.4l-42 0c-7.8 0-14-6.3-14-14c0-1.3 .2-2.6 .5-3.9L32 256 .5 145.9c-.4-1.3-.5-2.6-.5-3.9c0-7.8 6.3-14 14-14l42 0c5 0 9.8 2.4 12.8 6.4L112 192l102.9 0-49-171.6C162.9 10.2 170.6 0 181.2 0l56.2 0c11.5 0 22.1 6.2 27.8 16.1L365.7 192l116.6 0z"/>
+                            </svg>
+                        </td>
+                        <td class="text-sm">from €480</td>
+                    </tr>
+                    <tr>
+                        <td class="font-medium">Barcelona Elegance Inn</td>
+                        <td class="text-sm text-center">5</td>
+                        <td class="text-sm">10 nights</td>
+                        <td class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 mx-auto" viewBox="0 0 448 512">
+                                <path d="M96 0C43 0 0 43 0 96L0 352c0 48 35.2 87.7 81.1 94.9l-46 46C28.1 499.9 33.1 512 43 512l39.7 0c8.5 0 16.6-3.4 22.6-9.4L160 448l128 0 54.6 54.6c6 6 14.1 9.4 22.6 9.4l39.7 0c10 0 15-12.1 7.9-19.1l-46-46c46-7.1 81.1-46.9 81.1-94.9l0-256c0-53-43-96-96-96L96 0zM64 96c0-17.7 14.3-32 32-32l256 0c17.7 0 32 14.3 32 32l0 96c0 17.7-14.3 32-32 32L96 224c-17.7 0-32-14.3-32-32l0-96zM224 288a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
+                            </svg>
+                        </td>
+                        <td class="text-sm">from €930</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="flex flex-col gap-5 w-full bg-content items-center justify-center px-5 py-10 lg:px-10 pb-0">
+        <h1 class="font-bold text-white text-3xl text-center">Subscribe to our newsletter</h1>
+        <p class="text-white text-center">Know about our new offers first!</p>
+        <div class="flex justify-center relative w-full max-w-md mt-5">
+            <input type="text" class="bg-white rounded-full w-full px-5 py-3 outline-none" name="subscribe" id="subscribe" placeholder="@gmail.com">
+            <div class="absolute top-0 -right-1 h-full w-fit">
+                <button type="button" class="rounded-full px-5 h-full bg-primary hover:bg-amber-700">
+                    <span class="text-white font-medium font-poppins">Subscribe</span>
+                </button>
+            </div>
+        </div>
+        <div class="pb-0 lg:p-5 mt-5 w-full grid grid-cols-2 lg:grid-cols-3 gap-5 items-center">
+            <div class="flex gap-2 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6 text-primary">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-1.5 0a6.5 6.5 0 1 1-11-4.69v.447a3.5 3.5 0 0 0 1.025 2.475L8.293 10 8 10.293a1 1 0 0 0 0 1.414l1.06 1.06a1.5 1.5 0 0 1 .44 1.061v.363a1 1 0 0 0 .553.894l.276.139a1 1 0 0 0 1.342-.448l1.454-2.908a1.5 1.5 0 0 0-.281-1.731l-.772-.772a1 1 0 0 0-1.023-.242l-.384.128a.5.5 0 0 1-.606-.25l-.296-.592a.481.481 0 0 1 .646-.646l.262.131a1 1 0 0 0 .447.106h.188a1 1 0 0 0 .949-1.316l-.068-.204a.5.5 0 0 1 .149-.538l1.44-1.234A6.492 6.492 0 0 1 16.5 10Z" clip-rule="evenodd" />
+                </svg>
+                <h1 class="font-bold text-xl text-white">Travel</h1>
+            </div>
+            <p class="hidden lg:block text-white text-xs text-center">Copyright 2010-2023, All rights reserved.</p>
+            <nav class="flex justify-end gap-7 items-center">
+                <a href="#" class="text-white text-xs">Legal</a>
+                <a href="#" class="text-white text-xs">Privacy policy</a>
+            </nav>
+            <p class="block lg:hidden col-span-full border-t w-full text-white text-xs text-center px-5 py-3">Copyright 2010-2023, All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

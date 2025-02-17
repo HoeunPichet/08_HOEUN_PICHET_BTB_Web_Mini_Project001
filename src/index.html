@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../output/app.css">
+    <title>Document</title>
+</head>
+<body class="bg-light">
+    <!-- Page Header -->
+    <header class="px-5 h-20 w-full flex gap-5 items-center justify-between sticky top-0 bg-light z-50">
+        <div class="flex gap-2 items-center basis-40 lg:basis-60 xl:basis-72">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-7 text-primary">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-1.5 0a6.5 6.5 0 1 1-11-4.69v.447a3.5 3.5 0 0 0 1.025 2.475L8.293 10 8 10.293a1 1 0 0 0 0 1.414l1.06 1.06a1.5 1.5 0 0 1 .44 1.061v.363a1 1 0 0 0 .553.894l.276.139a1 1 0 0 0 1.342-.448l1.454-2.908a1.5 1.5 0 0 0-.281-1.731l-.772-.772a1 1 0 0 0-1.023-.242l-.384.128a.5.5 0 0 1-.606-.25l-.296-.592a.481.481 0 0 1 .646-.646l.262.131a1 1 0 0 0 .447.106h.188a1 1 0 0 0 .949-1.316l-.068-.204a.5.5 0 0 1 .149-.538l1.44-1.234A6.492 6.492 0 0 1 16.5 10Z" clip-rule="evenodd" />
+            </svg>
+            <h1 class="font-bold text-3xl">Travel</h1>
+        </div>
+        <nav class="hidden md:flex justify-center">
+            <ul class="flex gap-1 lg:gap-5 [&>*>*]:px-3 font-poppins [&>*>*]:hover:text-primary [&>*>*]:hover:font-bold">
+                <li>
+                    <a href="#" class="font-bold text-md text-primary">Home</a>
+                </li>
+                <li>
+                    <a href="./offer.html" class="font-medium text-md">Our offer</a>
+                </li>
+                <li>
+                    <a href="./booking.html" class="font-medium text-md">Booking</a>
+                </li>
+                <li>
+                    <a href="./faq.html" class="font-medium text-md">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="hidden md:block relative basis-48 lg:basis-60 xl:basis-72">
+            <input type="text" name="" class="border text-xs w-full border-slate-400 focus:border-primary rounded-full outline-none px-4 py-2.5 placeholder:text-slate-800" placeholder="Search">
+            <div class="absolute top-1/2 -translate-y-[50%] right-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5 text-primary">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Mobile Screen Sidebar -->
+        <aside class="block md:hidden">
+            <input type="checkbox" id="open-menu" class="sr-only peer">
+            <label for="open-menu" class="relative peer-checked:[&>.backdrop]:block peer-checked:[&>nav]:w-[80vh]">
+                <div class="rounded-md flex place-items-center group cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-7 text-primary" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </div>
+                <div class="backdrop fixed top-0 left-0 z-30 hidden bg-black/30 w-full h-screen"></div>
+                <nav class="fixed z-50 top-0 right-0 h-screen w-0 transition-all duration-500 overflow-hidden bg-content max-w-64 shadow">
+                    <div class="px-3">
+                        <div class="flex w-full justify-start border-b border-slate-300 h-16 gap-2 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-7 text-primary">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-1.5 0a6.5 6.5 0 1 1-11-4.69v.447a3.5 3.5 0 0 0 1.025 2.475L8.293 10 8 10.293a1 1 0 0 0 0 1.414l1.06 1.06a1.5 1.5 0 0 1 .44 1.061v.363a1 1 0 0 0 .553.894l.276.139a1 1 0 0 0 1.342-.448l1.454-2.908a1.5 1.5 0 0 0-.281-1.731l-.772-.772a1 1 0 0 0-1.023-.242l-.384.128a.5.5 0 0 1-.606-.25l-.296-.592a.481.481 0 0 1 .646-.646l.262.131a1 1 0 0 0 .447.106h.188a1 1 0 0 0 .949-1.316l-.068-.204a.5.5 0 0 1 .149-.538l1.44-1.234A6.492 6.492 0 0 1 16.5 10Z" clip-rule="evenodd" />
+                            </svg>
+                            <h1 class="font-bold text-3xl text-white">Travel</h1>
+                        </div>
+                    </div>
+                    <h1 class="p-3 pb-0 font-poppins font-medium text-lg mt-3 text-white">Menu</h1>
+                    <ul class="flex flex-col p-3 [&>*>*]:font-poppins [&>*>*]:text-white gap-3">
+                        <li class="flex gap-3 items-end cursor-pointer bg-primary px-3 py-2 rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                            </svg>                              
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="flex gap-3 items-end cursor-pointer hover:bg-primary px-3 py-2 rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+                            </svg>                                                          
+                            <a href="#">Our offer</a>
+                        </li>
+                        <li class="flex gap-3 items-end cursor-pointer hover:bg-primary px-3 py-2 rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0 1 20.25 6v12A2.25 2.25 0 0 1 18 20.25H6A2.25 2.25 0 0 1 3.75 18V6A2.25 2.25 0 0 1 6 3.75h1.5m9 0h-9" />
+                            </svg>                                                          
+                            <a href="#">Booking</a>
+                        </li>
+                        <li class="flex gap-3 items-end cursor-pointer hover:bg-primary px-3 py-2 rounded-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+                            </svg>
+                            <a href="#">FAQ</a>
+                        </li>
+                    </ul>
+                </nav>
+            </label>
+        </aside>
+    </header>
+
+    <!-- Main Content -->
+    <main class="px-5 w-full max-w-7xl mx-auto mt-5">
+        <!-- Hero Section -->
+        <section class="relative h-96 lg:h-[28rem] overflow-hidden rounded-3xl">
+            <img class="object-cover w-full h-full object-bottom" src="./images/banner1.jpg" alt="Banner1">
+            <div class="absolute left-0 top-0 bg-content/85 rounded-3xl h-full w-full md:w-1/2 lg:w-2/5 px-10 flex flex-col gap-5 justify-center">
+                <h1 class="font-poppins font-black text-5xl text-white leading-14">
+                    <span>Explore</span><br>
+                    <span class="text-primary">the world</span><br>
+                    <span>with us</span>
+                </h1>
+                <p class="font-poppins text-white font-medium">Discover possiblities of traveling!</p>
+                <button type="button" class="px-8 py-1.5 font-medium rounded-full bg-primary hover:bg-amber-700 text-white cursor-pointer w-fit">Explore</button>
+            </div>
+        </section>
+        <!-- Schedule Section -->
+        <section class="mt-8 mx-auto w-full lg:w-4/5">
+            <div class="w-full bg-lightgray rounded-3xl flex flex-wrap items-center p-5 gap-5">
+                <dl class="flex max-[580px]:justify-between min-[580px]:flex-col gap-2 font-poppins text-sm basis-full min-[580px]:basis-[50%] md:basis-[25%] min-[580px]:border-r border-primary">
+                    <dt class="font-bold">Location</dt>
+                    <dd>Spain</dd>
+                </dl>
+                <dl class="flex max-[580px]:justify-between min-[580px]:flex-col gap-2 font-poppins text-sm basis-full min-[580px]:basis-[45%] md:basis-[35%] max-[580px]:pt-5 max-[580px]:border-t md:border-r border-primary">
+                    <dt class="font-bold">Date</dt>
+                    <dd>01/09/2023 -  10/09/2023</dd>
+                </dl>
+                <div class="flex flex-wrap gap-5 justify-between items-center pt-5 md:pt-0 grow border-t md:border-t-0 border-primary">
+                    <dl class="flex max-[580px]:justify-between min-[580px]:flex-col max-[580px]:basis-full gap-2 font-poppins text-sm">
+                        <dt class="font-bold">Guests</dt>
+                        <dd>2 adults</dd>
+                    </dl>
+                    <button type="button" class="px-8 py-2.5 font-medium text-sm rounded-full bg-content hover:bg-green-950 text-white cursor-pointer max-[580px]:grow">
+                        <span>Search</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Travel Category Section -->
+        <section class="flex flex-col items-center gap-8 mt-16 mx-auto w-full min-[880px]:w-5/6 lg:w-5/7">
+            <h1 class="font-poppins text-2xl font-bold">Travel categories</h1>
+            <div class="grid grid-cols-2 min-[730px]:grid-cols-3 gap-5 lg:gap-8 w-full">
+                <!-- Beach Gateaway -->
+                <a href="#" class="group bg-lightgray hover:bg-lightprimary rounded-2xl px-5 py-5 sm:py-10 h-48 sm:h-56 flex flex-col gap-10 items-center">
+                    <div class="w-16 h-16 bg-white rounded-full flex justify-center">
+                        <svg class="fill-primary group-hover:fill-black size-11 translate-y-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path d="M346.3 271.8l-60.1-21.9L214 448 32 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l512 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-261.9 0 64.1-176.2zm121.1-.2l-3.3 9.1 67.7 24.6c18.1 6.6 38-4.2 39.6-23.4c6.5-78.5-23.9-155.5-80.8-208.5c2 8 3.2 16.3 3.4 24.8l.2 6c1.8 57-7.3 113.8-26.8 167.4zM462 99.1c-1.1-34.4-22.5-64.8-54.4-77.4c-.9-.4-1.9-.7-2.8-1.1c-33-11.7-69.8-2.4-93.1 23.8l-4 4.5C272.4 88.3 245 134.2 226.8 184l-3.3 9.1L434 269.7l3.3-9.1c18.1-49.8 26.6-102.5 24.9-155.5l-.2-6zM107.2 112.9c-11.1 15.7-2.8 36.8 15.3 43.4l71 25.8 3.3-9.1c19.5-53.6 49.1-103 87.1-145.5l4-4.5c6.2-6.9 13.1-13 20.5-18.2c-79.6 2.5-154.7 42.2-201.2 108z"/>
+                        </svg>
+                    </div>
+                    <p class="text-center font-light letter-spacing">BEACH<br>GETAWAY</p>
+                </a>
+                <!-- Adventure Time -->
+                <a href="#" class="group bg-lightgray hover:bg-lightprimary rounded-2xl px-5 py-5 sm:py-10 h-48 sm:h-56 flex flex-col gap-10 items-center">
+                    <div class="w-16 h-16 bg-white rounded-full flex justify-center">
+                        <svg class="fill-primary group-hover:fill-black size-11 translate-y-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path d="M269.4 6C280.5-2 295.5-2 306.6 6l224 160c7.4 5.3 12.2 13.5 13.2 22.5l32 288c1 9-1.9 18.1-8 24.9s-14.7 10.7-23.8 10.7l-80 0-28.2 0c-12.1 0-23.2-6.8-28.6-17.7L306.7 293.5c-1.7-3.4-5.1-5.5-8.8-5.5c-5.5 0-9.9 4.4-9.9 9.9L288 480c0 17.7-14.3 32-32 32l-16 0L32 512c-9.1 0-17.8-3.9-23.8-10.7s-9-15.8-8-24.9l32-288c1-9 5.8-17.2 13.2-22.5L269.4 6z"/>
+                        </svg>
+                    </div>
+                    <p class="text-center font-light letter-spacing">ADVENTURE<br>TIME</p>
+                </a>
+                <!-- Exotic Trip -->
+                <a href="#" class="group bg-lightgray hover:bg-lightprimary rounded-2xl px-5 py-5 sm:py-10 h-48 sm:h-56 flex flex-col gap-10 items-center">
+                    <div class="w-16 h-16 bg-white rounded-full flex justify-center">
+                        <svg class="fill-primary group-hover:fill-black size-11 translate-y-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M209.7 3.4c15.8-7.9 35-1.5 42.9 14.3l25 50 42.4 8.5c19.5 3.9 37.8 12.3 53.5 24.5l126.1 98.1c14 10.9 16.5 31 5.6 44.9s-31 16.5-44.9 5.6l-72.1-56.1-71.5 31.8 33.1 27.6c23.2 19.3 33.5 50 26.7 79.4l-17.4 75.2c-2.2 9.4-8.2 16.8-16.1 21l86.5 33.1c4.6 1.8 9.4 2.6 14.3 2.6l28.2 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-28.2 0c-10.8 0-21.4-2-31.5-5.8L60.1 371.3c-11.5-4.4-22-11.2-30.8-20L7 329c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l22.4 22.4c4 4 8.7 7.1 14 9.1l22.4 8.6c-.8-1.6-1.5-3.2-2.1-4.9c-5.6-16.8 3.5-34.9 20.2-40.5L192 264.9l0-53.2c0-24.2 13.7-46.4 35.4-57.2l45.2-22.6-7.5-1.5c-19.4-3.9-35.9-16.5-44.7-34.1l-25-50c-7.9-15.8-1.5-35 14.3-42.9zM139 350.1l159 60.9c-2.1-5.6-2.6-11.9-1.1-18.2l17.4-75.2c1.4-5.9-.7-12-5.3-15.9l-52.8-44 0 18.8c0 20.7-13.2 39-32.8 45.5L139 350.1zM432 0a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
+                        </svg>
+                    </div>
+                    <p class="text-center font-light letter-spacing">EXOTIC TRIPS</p>
+                </a>
+                <!-- Cruises -->
+                <a href="#" class="group bg-lightgray hover:bg-lightprimary rounded-2xl px-5 py-5 sm:py-10 h-48 sm:h-56 flex flex-col gap-10 items-center">
+                    <div class="w-16 h-16 bg-white rounded-full flex justify-center">
+                        <svg class="fill-primary group-hover:fill-black size-11 translate-y-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path d="M192 32c0-17.7 14.3-32 32-32L352 0c17.7 0 32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 128 44.4 14.8c23.1 7.7 29.5 37.5 11.5 53.9l-101 92.6c-16.2 9.4-34.7 15.1-50.9 15.1c-19.6 0-40.8-7.7-59.2-20.3c-22.1-15.5-51.6-15.5-73.7 0c-17.1 11.8-38 20.3-59.2 20.3c-16.2 0-34.7-5.7-50.9-15.1l-101-92.6c-18-16.5-11.6-46.2 11.5-53.9L96 240l0-128c0-26.5 21.5-48 48-48l48 0 0-32zM160 218.7l107.8-35.9c13.1-4.4 27.3-4.4 40.5 0L416 218.7l0-90.7-256 0 0 90.7zM306.5 421.9C329 437.4 356.5 448 384 448c26.9 0 55.4-10.8 77.4-26.1c0 0 0 0 0 0c11.9-8.5 28.1-7.8 39.2 1.7c14.4 11.9 32.5 21 50.6 25.2c17.2 4 27.9 21.2 23.9 38.4s-21.2 27.9-38.4 23.9c-24.5-5.7-44.9-16.5-58.2-25C449.5 501.7 417 512 384 512c-31.9 0-60.6-9.9-80.4-18.9c-5.8-2.7-11.1-5.3-15.6-7.7c-4.5 2.4-9.7 5.1-15.6 7.7c-19.8 9-48.5 18.9-80.4 18.9c-33 0-65.5-10.3-94.5-25.8c-13.4 8.4-33.7 19.3-58.2 25c-17.2 4-34.4-6.7-38.4-23.9s6.7-34.4 23.9-38.4c18.1-4.2 36.2-13.3 50.6-25.2c11.1-9.4 27.3-10.1 39.2-1.7c0 0 0 0 0 0C136.7 437.2 165.1 448 192 448c27.5 0 55-10.6 77.5-26.1c11.1-7.9 25.9-7.9 37 0z"/>
+                        </svg>
+                    </div>
+                    <p class="text-center font-light letter-spacing">CRUISES</p>
+                </a>
+                <!-- Last Minute -->
+                <a href="#" class="group bg-lightgray hover:bg-lightprimary rounded-2xl px-5 py-5 sm:py-10 h-48 sm:h-56 flex flex-col gap-10 items-center">
+                    <div class="w-16 h-16 bg-white rounded-full flex justify-center">
+                        <svg class="fill-primary group-hover:fill-black size-11 translate-y-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M156.6 384.9L125.7 354c-8.5-8.5-11.5-20.8-7.7-32.2c3-8.9 7-20.5 11.8-33.8L24 288c-8.6 0-16.6-4.6-20.9-12.1s-4.2-16.7 .2-24.1l52.5-88.5c13-21.9 36.5-35.3 61.9-35.3l82.3 0c2.4-4 4.8-7.7 7.2-11.3C289.1-4.1 411.1-8.1 483.9 5.3c11.6 2.1 20.6 11.2 22.8 22.8c13.4 72.9 9.3 194.8-111.4 276.7c-3.5 2.4-7.3 4.8-11.3 7.2l0 82.3c0 25.4-13.4 49-35.3 61.9l-88.5 52.5c-7.4 4.4-16.6 4.5-24.1 .2s-12.1-12.2-12.1-20.9l0-107.2c-14.1 4.9-26.4 8.9-35.7 11.9c-11.2 3.6-23.4 .5-31.8-7.8zM384 168a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/>
+                        </svg>
+                    </div>
+                    <p class="text-center font-light letter-spacing">LAST MINUTE</p>
+                </a>
+                <!-- Mountains -->
+                <a href="#" class="group bg-lightgray hover:bg-lightprimary rounded-2xl px-5 py-5 sm:py-10 h-48 sm:h-56 flex flex-col gap-10 items-center">
+                    <div class="w-16 h-16 bg-white rounded-full flex justify-center">
+                        <svg class="fill-primary group-hover:fill-black size-11 translate-y-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                            <path d="M560 160A80 80 0 1 0 560 0a80 80 0 1 0 0 160zM55.9 512l325.2 0 75 0 122.8 0c33.8 0 61.1-27.4 61.1-61.1c0-11.2-3.1-22.2-8.9-31.8l-132-216.3C495 196.1 487.8 192 480 192s-15 4.1-19.1 10.7l-48.2 79L286.8 81c-6.6-10.6-18.3-17-30.8-17s-24.1 6.4-30.8 17L8.6 426.4C3 435.3 0 445.6 0 456.1C0 487 25 512 55.9 512z"/>
+                        </svg>
+                    </div>
+                    <p class="text-center font-light letter-spacing">MOUNTAINS</p>
+                </a>
+            </div>
+        </section>
+        <!-- Visit Section -->
+        <section class="grid lg:grid-cols-2 items-center gap-5 w-full mx-auto p-16 rounded-3xl bg-lightyellow mt-14">
+            <article class="flex flex-col items-center lg:items-start">
+                <h1 class="font-poppins font-black text-5xl text-center lg:text-left">Visit Azores</h1>
+                <p class="text-xl font-poppins mt-10 text-center lg:text-left">10 night<br>from &nbsp;&nbsp;<span class="font-bold text-2xl">$80</span> /person</p>
+                <div class="mt-14">
+                    <a href="./trip.html" class="px-10 py-2 font-medium rounded-full bg-primary hover:bg-amber-700 text-white cursor-pointer w-fit">Explore now</a>
+                </div>
+            </article>
+            <div class="w-full relative mt-8 lg:mt-0">
+                <div class="absolute -right-12 -top-12 w-24 h-24 rounded-full bg-primary flex place-items-center">
+                    <p class="text-xl text-center text-white font-poppins font-bold">HOT OFFER</p>
+                </div>
+                <div class="grid min-[550px]:grid-cols-2 gap-5 justify-end w-full">
+                    <img class="h-52 lg:h-40 object-cover w-full rounded-2xl" src="./images/visit1.jpg" alt="Visit1">
+                    <img class="h-52 sm:h-full object-cover w-full rounded-2xl sm:row-span-2" src="./images/visit3.jpg" alt="Visit3">
+                    <img class="h-52 col-span-full sm:col-span-1 lg:h-40 object-cover w-full rounded-2xl" src="./images/visit2.jpg" alt="Visit2">
+                </div>
+            </div>
+        </section>
+        <!-- Best Offer Section -->
+        <section class="flex flex-col items-center gap-8 mt-16 mx-auto mb-16 min-[530px]:mb-28 w-full sm:w-7/8 md:w-6/8">
+            <h1 class="font-poppins text-2xl font-bold">Best offers this week</h1>
+            <div class="grid min-[450px]:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 min-[530px]:gap-y-16 lg:gap-6 w-full">
+                <!-- Mountain -->
+                <div class="relative h-64 min-[530px]:h-72 min-[1100px]:h-80 w-full">
+                    <img class="w-full h-full rounded-2xl object-cover" src="./images/mountain.jpg" alt="Mountain">
+                    <div class="absolute bottom-0 min-[530px]:-bottom-10 left-1/2 -translate-x-1/2 w-full min-[530px]:px-5">
+                        <div class="rounded-b-2xl min-[530px]:rounded-2xl w-full bg-lightprimary px-5 py-4 flex flex-col">
+                            <p class="font-light letter-spacing">MOUNTAINS</p>
+                            <p class="font-bold">Dolomites</p>
+                            <p><span class="text-xs">from</span> €400</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Beach -->
+                <div class="relative h-64 min-[530px]:h-72 min-[1100px]:h-80 w-full">
+                    <img class="w-full h-full rounded-2xl object-cover" src="./images/beach.jpg" alt="Mountain">
+                    <div class="absolute bottom-0 min-[530px]:-bottom-10 left-1/2 -translate-x-1/2 w-full min-[530px]:px-5">
+                        <div class="rounded-b-2xl min-[530px]:rounded-2xl w-full bg-lightcontent px-5 py-4 flex flex-col text-white">
+                            <p class="font-light letter-spacing">BEACH</p>
+                            <p class="font-bold">Canary Island</p>
+                            <p><span class="text-xs">from</span> €750</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Beach -->
+                <div class="relative h-64 min-[530px]:h-72 min-[1100px]:h-80 w-full">
+                    <img class="w-full h-full rounded-2xl object-cover" src="./images/waterfall.jpg" alt="Waterfall">
+                    <div class="absolute bottom-0 min-[530px]:-bottom-10 left-1/2 -translate-x-1/2 w-full min-[530px]:px-5">
+                        <div class="rounded-b-2xl min-[530px]:rounded-2xl w-full bg-lightgray px-5 py-4 flex flex-col">
+                            <p class="font-light letter-spacing">RELAX</p>
+                            <p class="font-bold">Azores</p>
+                            <p><span class="text-xs">from</span> €680</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="flex flex-col gap-5 w-full bg-content items-center justify-center px-5 py-10 lg:px-10 pb-0">
+        <h1 class="font-bold text-white text-3xl text-center">Subscribe to our newsletter</h1>
+        <p class="text-white text-center">Know about our new offers first!</p>
+        <div class="flex justify-center relative w-full max-w-md mt-5">
+            <input type="text" class="bg-white rounded-full w-full px-5 py-3 outline-none" name="subscribe" id="subscribe" placeholder="@gmail.com">
+            <div class="absolute top-0 -right-1 h-full w-fit">
+                <button type="button" class="rounded-full px-5 h-full bg-primary hover:bg-amber-700">
+                    <span class="text-white font-medium font-poppins">Subscribe</span>
+                </button>
+            </div>
+        </div>
+        <div class="pb-0 lg:p-5 mt-5 w-full grid grid-cols-2 lg:grid-cols-3 gap-5 items-center">
+            <div class="flex gap-2 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6 text-primary">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-1.5 0a6.5 6.5 0 1 1-11-4.69v.447a3.5 3.5 0 0 0 1.025 2.475L8.293 10 8 10.293a1 1 0 0 0 0 1.414l1.06 1.06a1.5 1.5 0 0 1 .44 1.061v.363a1 1 0 0 0 .553.894l.276.139a1 1 0 0 0 1.342-.448l1.454-2.908a1.5 1.5 0 0 0-.281-1.731l-.772-.772a1 1 0 0 0-1.023-.242l-.384.128a.5.5 0 0 1-.606-.25l-.296-.592a.481.481 0 0 1 .646-.646l.262.131a1 1 0 0 0 .447.106h.188a1 1 0 0 0 .949-1.316l-.068-.204a.5.5 0 0 1 .149-.538l1.44-1.234A6.492 6.492 0 0 1 16.5 10Z" clip-rule="evenodd" />
+                </svg>
+                <h1 class="font-bold text-xl text-white">Travel</h1>
+            </div>
+            <p class="hidden lg:block text-white text-xs text-center">Copyright 2010-2023, All rights reserved.</p>
+            <nav class="flex justify-end gap-7 items-center">
+                <a href="#" class="text-white text-xs">Legal</a>
+                <a href="#" class="text-white text-xs">Privacy policy</a>
+            </nav>
+            <p class="block lg:hidden col-span-full border-t w-full text-white text-xs text-center px-5 py-3">Copyright 2010-2023, All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
